@@ -1,9 +1,5 @@
 <h1>Shops Page</h1>
 
-<p id="notice"><%= notice %></p>
-
-<h1>Products</h1>
-
 <% if current_user %>
     <%= link_to 'sign out', destroy_user_session_path, method: :delete %>
 <% else %>
@@ -11,6 +7,10 @@
 
    <%= link_to 'sign in', new_user_session_path %>
 <% end %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Products</h1>
 
 <table>
   <thead>
