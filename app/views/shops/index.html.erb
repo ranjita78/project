@@ -32,6 +32,11 @@
       <tr>
         <td><%= product.title %></td>
         <td><%= product.price %></td>
+        <td>
+           <% if product.image_filename %>
+             <p><%= image_tag product.image_filename %></p>
+           <% end %>
+        </td>
         <td><%= link_to 'Show', shop_path(product) %></td>
 
         <td>

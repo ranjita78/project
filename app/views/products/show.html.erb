@@ -5,10 +5,16 @@
   <%= @product.title %>
 </p>
 
+<% if @product.image_filename %>
+  <p><%= @product.image_filename %></p>
+<% end %>
+
 <p>
   <strong>Price:</strong>
   <%= @product.price %>
 </p>
+
+
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
