@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_09_023355) do
+ActiveRecord::Schema.define(version: 2021_06_10_042547) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "category"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "order_items", force: :cascade do |t|
     t.integer "quantity"
@@ -36,6 +42,7 @@ ActiveRecord::Schema.define(version: 2021_06_09_023355) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "image_filename"
     t.string "discription"
+    t.integer "category_id"
   end
 
   create_table "users", force: :cascade do |t|
