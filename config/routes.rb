@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get 'wishlists/show'
   resources :categories
   devise_for :users
   get 'cards/show'
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :order_items
   resources :cards, only:[:show] 
+  resources :wishlists, only:[:show]
 
 
   root 'shops#index'
