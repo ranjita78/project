@@ -1,5 +1,5 @@
 class WishlistsController < ApplicationController
   def show
-    @order_items = current_order.order_items
+    @favourite_items = current_favourite.favourite_items
   end
 end

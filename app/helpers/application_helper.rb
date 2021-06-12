@@ -8,4 +8,12 @@ module ApplicationHelper
             Order.new 
         end
     end
+
+    def current_favourite
+        if !session[:favourite_id].nil?
+            Favourite.find(session[:favourite_id])
+        else
+            Favourite.new 
+        end
+    end
 end
